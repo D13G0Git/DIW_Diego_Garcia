@@ -1,0 +1,60 @@
+@font-face {
+    font-family: fonty;
+    src: url(NotoSerifOriya-Regular.ttf);
+  }
+*{
+    font-family: fonty ;
+}
+body{
+    background-color: whitesmoke;
+    height: 100vh;
+    text-align: center;
+    margin: 0;
+}
+header{
+    background-color: aqua;
+    height: 10vh;
+}
+nav{
+    background-color:aquamarine;
+    height: 5vh;
+}
+section{
+    background-color: red;
+    height: 50%;
+}
+article{
+    background-color: brown;
+    float: right;
+    height: 50vh;
+    width: 40vw;
+}
+aside{
+    background-color:coral;
+    float: left;
+    height: 50vh;
+    width: 20vw;
+}
+footer{
+    background-color: teal;
+    height: 35vh;
+}
+.art2{
+    background-color: blueviolet;
+    
+    width: 40vw;
+}
+
+@media only screen and (max-width: 1000px) {
+    aside{
+        width: 34vw;
+    }
+    article{
+
+        width: 33vw;
+    }
+    .art2{
+        
+        width: 33vw;
+    }
+}

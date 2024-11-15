@@ -1,0 +1,70 @@
+/* Coche rueda rueda hasta muro, fuego, atraviesa el muero y choca contra casa (humo y escombros) Sonido */
+/*Portfolio  paginas, transiciones y animaciones sin bootstrap con flex*/
+@keyframes mover {
+    from {left: 1200px; opacity: 1;}
+    to {left: 300px; opacity: 0;}
+  }
+  @keyframes bomba {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  @keyframes band {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+body{
+    margin: 0;
+}
+#fondo{
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    display: flex;
+    flex-direction: column-reverse;
+}
+#suelo{
+    height: 50vh;
+    width: 100vw;
+    background: green;
+
+}
+#coche{
+    position: absolute;
+    opacity: 1;
+    height: 20vh;
+    left: 1200px;
+    top: 400px;
+    animation-name: mover;
+    animation-delay: 1s;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+#muro{
+    position: absolute;
+    height: 40vh;
+    left: 200px;
+    top: 320px;
+}
+#bmb{
+    position: absolute;
+    height: 60vh;
+    left: 200px;
+    top: 200px;
+    animation: bomba 3s;
+    animation-delay: 1s;
+
+}
+#flag{
+    position: absolute;
+    height: 40vh;
+    left: 800px;
+    top: 50px;
+    opacity: 0;
+    animation: band 1s;
+    animation-delay: 1s;
+
+}
+
+

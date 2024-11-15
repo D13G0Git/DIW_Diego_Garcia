@@ -1,0 +1,30 @@
+
+body{
+    margin: 0;
+    background-color: white;
+}
+nav{
+    background-color: black;
+}
+.wrapperrow1{
+    display: flex;
+    background-color: grey;
+    min-width: 960px;
+}
+section{
+    display: flex;
+    justify-content: center; 
+    flex-direction: row;
+    align-items: center; 
+}
+figcaption{
+    background-color: grey;
+}
+
+figcaption a:link{
+    color: orange;
+}
+footer{
+    margin-bottom: 0;
+}
+

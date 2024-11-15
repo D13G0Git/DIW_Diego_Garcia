@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halloween</title>
+    <link rel="stylesheet" href="imagenAnimada.css">
+</head>
+
+<body>
+    <div class="div1">
+        <img class="Casa" src="CasaGeneral.jpg" alt="CasaJaja">
+
+        <button class="audio-btn" data-audio="batmanAudio">Batman</button>
+        <button class="audio-btn" data-audio="arañaAudio">Araña</button>
+        <button class="audio-btn" data-audio="jovaniAudio">Jovani</button>
+        <button class="audio-btn" data-audio="mono1Audio">Mono 1</button>
+        <button class="audio-btn" data-audio="mono2Audio">Mono 2</button>
+        <button class="audio-btn" data-audio="rammsteinAudio">Rammstein</button>
+        <button class="audio-btn" data-audio="urssAudio">URSS</button>
+
+        <img class="overlay-image Calabaza" src="Calabaza.png" alt="Imagen 1">
+        <img class="overlay-image VentanaJovanni" src="VentanaJovanni.jpg" alt="Imagen 2">
+        <img class="overlay-image Cementerio" src="Cementerio.jpg" alt="Imagen 3">
+        <img class="overlay-image URSS" src="URSS.png" alt="">
+        <img class="overlay-image luna" src="luna.jpg" alt="">
+        <img class="overlay-image Batman" src="Batman.png" alt="">
+        <img class="overlay-image Jovani" src="Jovani.jpg" alt="">
+        <img class="overlay-image PintorAustriaco" src="PintorAustriaco.png" alt="">
+        <img class="overlay-image Araña" src="Araña.gif" alt="">
+        <img class="overlay-image CarlosMarcos" src="CarlosMarcos (2).png" alt="">
+        <img class="overlay-image Arbol" src="Arbol.jpg" alt="">
+        <img class="overlay-image Mono" src="Chimpance.png" alt="">
+
+        <audio id="batmanAudio" src="batman.mp3" preload="auto"></audio>
+        <audio id="arañaAudio" src="araña.mp3" preload="auto"></audio>
+        <audio id="jovaniAudio" src="jovani.mp3" preload="auto"></audio>
+        <audio id="mono1Audio" src="mono1.mp3" preload="auto"></audio>
+        <audio id="mono2Audio" src="mono2.mp3" preload="auto"></audio>
+        <audio id="rammsteinAudio" src="rammstein.mp3" preload="auto"></audio>
+        <audio id="urssAudio" src="urss.mp3" preload="auto"></audio>
+
+        <!-- Música de fondo -->
+        <audio id="musicaFondo" autoplay loop>
+            <source src="GoofyBeat.mp3" type="audio/mpeg">
+            Tu navegador no soporta la reproducción de audio.
+        </audio>
+    </div>
+</body>
+
+<script>
+    // Selecciona el elemento de audio de fondo
+    const backgroundMusic = document.getElementById('musicaFondo');
+    backgroundMusic.volume = 0.1;
+
+
+    const buttons = document.querySelectorAll('button.audio-btn');
+    const audios = document.querySelectorAll('audio');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Pausar todos los audios antes de reproducir uno nuevo
+            audios.forEach(audio => audio.pause());
+
+            const audioId = button.getAttribute('data-audio');
+            const audio = document.getElementById(audioId);
+            if (audio) {
+                audio.currentTime = 0; // Reinicia el audio
+                audio.play();
+            }
+        });
+    });
+
+    // Código para la animación de la araña y el mono
+    const tree = document.querySelector('.Arbol');
+    const monkey = document.querySelector('.Mono');
+    const newImageSrc = "jesus.png";
+
+    tree.addEventListener('mouseenter', () => {
+        setTimeout(() => {
+            monkey.src = newImageSrc;
+            monkey.style.transition = 'transform 2s ease, opacity 1s ease';
+            monkey.style.transform = 'translate(-90%, 100%) scale(4)';
+
+            setTimeout(() => {
+                monkey.style.opacity = '0';
+            }, 6000);
+        }, 1000);
+    });
+
+    const spider = document.querySelector('.Araña');
+    const moveDistance = window.innerWidth - 1700;
+
+    function moveSpider() {
+        spider.style.transform = `translateX(${moveDistance}px)`;
+        setTimeout(() => {
+            spider.style.transform = `translateX(0)`;
+        }, 2000);
+    }
+
+    setInterval(moveSpider, 4000); 
+</script>
+
+</html>

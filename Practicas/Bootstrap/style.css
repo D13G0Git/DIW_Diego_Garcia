@@ -1,0 +1,15 @@
+*{
+    text-align: center;
+}
+body{
+    background-color: black;
+}
+.row{
+    margin: 10px;
+    padding-bottom: 15%;
+    border: 1px solid black;
+    background-color: blue;
+}
+aside{
+    border: 1px solid black;
+}

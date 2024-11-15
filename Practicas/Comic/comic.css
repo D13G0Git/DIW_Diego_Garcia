@@ -1,0 +1,36 @@
+
+.fila{
+    display: flex;
+}
+.hijo{
+    flex-direction: column;
+
+}
+.right{
+    display: inline-block;
+}
+
+img{
+    max-height: 100vw;
+
+}
+.anim20{
+    position: absolute;
+    width: 0;
+    transition:
+    width 2s;
+}
+.anim20:hover{
+    width: 300px;
+}
+.animC{
+    position: absolute;
+    
+    transition:
+    rotate 4s;
+}
+
+.animC:hover{
+    rotate: 360deg;
+}
+

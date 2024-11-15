@@ -1,0 +1,38 @@
+
+
+body{
+  background-image: url(70d1424f58ee0ff2c9c5c02dec513e99.jpg);
+  background-repeat: no-repeat;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+
+.slidingdoors div{
+  left: 5.8vw;
+  top: 20.5vh;
+  color: rgb(0, 0, 0);
+  width: 50px;
+  height: 100px;
+  position: relative;
+  float: left;
+  margin: 15px;
+  box-sizing: border-box;
+  transition: border .3s ease;
+  border-radius: 3px;
+
+}
+
+
+
+
+.slideright{
+  background: white url(images.png) left;
+  border-right: solid 51px black; 
+}
+
+.slideright:hover{
+  border: solid 0px;
+}
+
